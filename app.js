@@ -38,6 +38,7 @@ function toggleTask(id) {
   tasks = tasks.map(task =>
     task.id === id ? { ...task, completed: !task.completed } : task
   );
+  saveTasks();
   renderTasks();
 }
 
@@ -53,7 +54,7 @@ function getVisibleTasks() {
   }
 
   if (currentFilter === 'completed') {
-    return tasks.filter(task => !task.completed);
+    return tasks.filter(task => task.completed);
   }
 
   return tasks;
@@ -111,7 +112,7 @@ document.querySelectorAll('.filter').forEach(button => {
 });
 
 clearCompletedButton.addEventListener('click', () => {
-  tasks = tasks.filter(task => task.completed);
+  tasks = tasks.filter(task => !task.completed);
   saveTasks();
   renderTasks();
 });
