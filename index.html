@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple task tracker to organize your day.">
+  <title>TaskTracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+        <h1>Task<span>Tracker</span></h1>
+      </div>
+      <span class="date" id="today"></span>
+    </header>
+
+    <section class="intro">
+      <h2>Make today count.</h2>
+      <p>A little progress every day adds up.</p>
+    </section>
+
+    <form class="composer" id="task-form">
+      <label class="sr-only" for="task-input">New task</label>
+      <input id="task-input" type="text" placeholder="What needs to get done?" maxlength="100" autocomplete="off">
+      <button type="submit">Add task <span aria-hidden="true">＋</span></button>
+    </form>
+
+    <section class="task-section">
+      <div class="section-heading">
+        <h2>Your tasks <span id="task-count">0</span></h2>
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button class="filter active" data-filter="all" type="button">All</button>
+          <button class="filter" data-filter="active" type="button">Active</button>
+          <button class="filter" data-filter="completed" type="button">Done</button>
+        </div>
+      </div>
+
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+      <p id="empty-state" class="empty-state">Nothing here yet. Add your first task above.</p>
+    </section>
+
+    <footer>
+      <span>Small steps. Real progress.</span>
+      <button id="clear-completed" class="text-button" type="button">Clear completed</button>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
