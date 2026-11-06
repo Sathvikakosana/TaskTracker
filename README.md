@@ -7,6 +7,7 @@ A small task manager built with vanilla HTML, CSS, and JavaScript. No framework,
 2. Open `index.html` in Chrome, Firefox, Safari, or Edge.
 3. Add a task and try the filters, completion checkbox, and clear button.
 
+
 ## Features
 - Add and delete tasks
 - Mark tasks as complete
@@ -26,3 +27,4 @@ Find the root cause of each issue, fix it, and test again. The README intentiona
 - `index.html` — page structure
 - `style.css` — styling
 - `app.js` — application logic
+
