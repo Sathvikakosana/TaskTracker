@@ -15,6 +15,7 @@ A small task manager built with vanilla HTML, CSS, and JavaScript. No framework,
 - Persist tasks in browser local storage
 - Responsive dark interface
 
+
 ## Bug-fix challenge
 This repository intentionally contains **three bugs**. Try these test cases:
 1. Create two tasks, complete one, then reload the page.
@@ -22,6 +23,7 @@ This repository intentionally contains **three bugs**. Try these test cases:
 3. Create one completed task and one active task, then use **Clear completed**.
 
 Find the root cause of each issue, fix it, and test again. The README intentionally does not include the solutions.
+
 
 ## Files
 - `index.html` — page structure
